@@ -1,0 +1,12 @@
+{
+    "name": "bookboon/action-models-php",
+    "type": "library",
+    "autoload": {
+        "psr-4": {
+            "Bookboon\\ActionModels\\": "ActionModels/"
+        }
+    },
+    "require": {
+        "php": ">=7.4"
+    }
+}
