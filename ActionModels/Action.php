@@ -11,7 +11,7 @@ class Action
     /** @var Attribute[] $attributes */
     protected array $attributes = [];
     protected string $browser = '';
-    protected ?string $browserVersion = null;
+    protected ?int $browserVersion = null;
     protected ?string $clientIp = null;
     protected string $currentUrl = '';
     protected ?\DateTime $deviceTimestamp = null;
@@ -24,8 +24,8 @@ class Action
     protected ?string $nonce = null;
     protected string $os = '';
     protected string $referrer = '';
-    protected float $screenHeight = 0.0;
-    protected float $screenWidth = 0.0;
+    protected int $screenHeight = 0;
+    protected int $screenWidth = 0;
     protected string $sessionId = '';
     protected ?string $uiLanguage = null;
     protected ?string $userAgent = null;
@@ -76,12 +76,12 @@ class Action
         return $this->browser;
     }
 
-    public function setBrowserVersion(?string $browserVersion): void
+    public function setBrowserVersion(?int $browserVersion): void
     {
         $this->browserVersion = $browserVersion;
     }
 
-    public function getBrowserVersion(): ?string
+    public function getBrowserVersion(): ?int
     {
         return $this->browserVersion;
     }
@@ -192,22 +192,22 @@ class Action
         return $this->referrer;
     }
 
-    public function setScreenHeight(float $screenHeight): void
+    public function setScreenHeight(int $screenHeight): void
     {
         $this->screenHeight = $screenHeight;
     }
 
-    public function getScreenHeight(): float
+    public function getScreenHeight(): int
     {
         return $this->screenHeight;
     }
 
-    public function setScreenWidth(float $screenWidth): void
+    public function setScreenWidth(int $screenWidth): void
     {
         $this->screenWidth = $screenWidth;
     }
 
-    public function getScreenWidth(): float
+    public function getScreenWidth(): int
     {
         return $this->screenWidth;
     }
